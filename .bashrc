@@ -24,6 +24,10 @@ pi() {
 	ssh emilio@raspberrypi.local;
 }
 
+tailscalepi() {
+	tailscale ssh emilio@raspberrypi;
+}
+
 # Colored prompt: username@hostname directory $
 PS1='\[\e[35m\]\u@\h\[\e[0m\] \[\e[32m\]\w\[\e[0m\] \$ '
 
