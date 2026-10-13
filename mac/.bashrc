@@ -47,3 +47,7 @@ if command -v fnm >/dev/null 2>&1; then
     eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 fi
 
+# gcc_arm_embedded stuff for formula FSAE. The car uses arm none eabi so
+# that's the set arm_gcc
+export ARM_GCC="/Applications/ArmGNUToolchain/15.3.rel2/arm-none-eabi"
+export PATH="$ARM_GCC/bin:$PATH"
