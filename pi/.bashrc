@@ -168,3 +168,7 @@ fi
 # that's the set arm_gcc
 export ARM_GCC="/usr/bin/arm-none-eabi-g++"
 
+# quick conversion for NOOP resolution for macbook
+quickres(){
+	wlr-randr --output NOOP-1 --custom-mode 1510x980@120Hz
+}
