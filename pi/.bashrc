@@ -172,3 +172,8 @@ export ARM_GCC="/usr/bin/arm-none-eabi-g++"
 quickres(){
 	wlr-randr --output NOOP-1 --custom-mode 1510x980@120Hz
 }
+
+# quick conversion for NOOP resolution for ipad pro
+quickres-ipad(){
+    wlr-randr --output NOOP-1 --custom-mode 1580x1080@120Hz
+}
