@@ -1,13 +1,13 @@
 # User executables
 export PATH="$HOME/.local/bin:$PATH"
 
-# Run Claude using the paid Anthropic service
+# Run Claude using the paid Anthropic service (PRESET MODEL, to change, remove flag)
 claude-paid() {
     unset ANTHROPIC_API_KEY
     unset ANTHROPIC_BASE_URL
     unset ANTHROPIC_AUTH_TOKEN
 
-    claude "$@"
+    claude --model qwen3.8:27b-dflash2-nvfp4 "$@"
 }
 
 # Run Claude using local Ollama
