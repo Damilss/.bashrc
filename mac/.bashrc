@@ -7,7 +7,7 @@ claude-paid() {
     unset ANTHROPIC_BASE_URL
     unset ANTHROPIC_AUTH_TOKEN
 
-    claude --model qwen3.8:27b-dflash2-nvfp4 "$@"
+    claude "$@"
 }
 
 # Run Claude using local Ollama
@@ -15,13 +15,17 @@ claude-local() {
     ANTHROPIC_BASE_URL="http://localhost:11434" \
     ANTHROPIC_AUTH_TOKEN="ollama" \
     ANTHROPIC_API_KEY="" \
-    claude "$@"
+    claude --model qwen3.8:27b-dflash2-nvfp4 "$@"
 }
 
 
 # ssh into raspberrypi.local
 pi() { 
 	ssh emilio@raspberrypi.local;
+}
+
+calpoly() {
+    ssh escott15@linux1.csc.calpoly.edu 
 }
 
 tailscalepi() {
@@ -51,3 +55,7 @@ fi
 # that's the set arm_gcc
 export ARM_GCC="/Applications/ArmGNUToolchain/15.3.rel2/arm-none-eabi"
 export PATH="$ARM_GCC/bin:$PATH"
+
+# Raspberry Pi Pico SDK (pi-net-rescue firmware), pinned to 2.3.1 by
+# pi-net-rescue/scripts/install-firmware-tooling.sh
+export PICO_SDK_PATH="$HOME/pico/pico-sdk"
