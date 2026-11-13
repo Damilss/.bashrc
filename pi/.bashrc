@@ -175,5 +175,5 @@ quickres(){
 
 # quick conversion for NOOP resolution for ipad pro
 quickres-ipad(){
-    wlr-randr --output NOOP-1 --custom-mode 1580x1080@120Hz
+    wlr-randr --output NOOP-1 --custom-mode 1580x1100@120Hz
 }
